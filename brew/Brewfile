@@ -1,0 +1,56 @@
+# taps —————————————————————————————————————————————————————————————————————————
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+
+# brew —————————————————————————————————————————————————————————————————————————
+brew 'coreutils'
+brew "fish"
+brew 'git'
+brew "mas"
+brew "mongodb"
+brew 'node'
+brew "wget"
+
+# cask —————————————————————————————————————————————————————————————————————————
+cask "bartender"
+cask "cheatsheet"
+cask "discord"
+cask "docker"
+cask "dropbox"
+cask "firefox"
+cask "framer-x"
+cask "github"
+cask "google-chrome"
+cask "iterm2"
+cask "onedrive"
+cask "sequel-pro"
+cask "sketch"
+cask "skype"
+cask "spectacle"
+cask "tower2"
+cask "transmission"
+cask "twitch"
+cask "visual-studio-code"
+cask "vlc"
+cask "zoomus"
+
+# mas ——————————————————————————————————————————————————————————————————————————
+# mas "1Password", id: 443987910
+# mas "AudioBookBinder", id: 413969927
+# mas "Deliveries", id: 924726344
+# mas "Fantastical", id: 435003921
+# mas "iTranslate", id: 884952790
+# mas "Kaleidoscope", id: 587512244
+# mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Pixelmator", id: 407963104
+# mas "RAW Power", id: 1157116444
+# mas "The Unarchiver", id: 425424353
+# mas "Transmit", id: 403388562
+# mas "Tweetbot", id: 1384080005
+# mas "Ulysses", id: 623795237
+# mas "Xcode", id: 497799835
