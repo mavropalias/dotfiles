@@ -9,7 +9,8 @@ main() {
 
     clone_dotfiles_repo
     install_packages_with_brewfile
-    change_shell_to_fish
+    # change_shell_to_fish
+    install_pip_packages
     configure_git
     configure_iterm2
     setup_macOS_defaults
@@ -139,6 +140,29 @@ function change_shell_to_fish() {
             error "Please try setting the Fish shell again."
         fi
     fi
+}
+
+function install_pip_packages() {
+    pip_packages=(powerline-status)
+    info "Installing pip packages \"${pip_packages[*]}\""
+
+    pip3_list_outcome=$(pip3 list)
+    for package_to_install in "${pip_packages[@]}"
+    do
+        if echo "$pip3_list_outcome" | \
+            grep --ignore-case "$package_to_install" &> /dev/null; then
+            substep "\"${package_to_install}\" already exists"
+        else
+            if pip3 install "$package_to_install"; then
+                substep "Package \"${package_to_install}\" installation succeeded"
+            else
+                error "Package \"${package_to_install}\" installation failed"
+                exit 1
+            fi
+        fi
+    done
+
+    success "pip packages successfully installed"
 }
 
 function configure_git() {
