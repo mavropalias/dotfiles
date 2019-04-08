@@ -5,9 +5,7 @@ main() {
     install_homebrew
 
     brew_install mas # mac app store command-line interface
-    # Disabled automated login, as it doesn't work on Mojave
-    # https://github.com/mas-cli/mas/issues/164
-    # login_to_app_store
+    login_to_app_store
 
     clone_dotfiles_repo
     install_packages_with_brewfile
@@ -67,16 +65,16 @@ function brew_install() {
 
 function login_to_app_store() {
     info "Logging into app store..."
-    # if mas account >/dev/null; then
-    #     success "Already logged in."
-    # else
-    #     open -a "/Applications/App Store.app"
-    #     until (mas account > /dev/null);
-    #     do
-    #         sleep 3
-    #     done
-    #     success "Login to app store successful."
-    # fi
+    if mas account >/dev/null; then
+        success "Already logged in."
+    else
+        open -a "/Applications/App Store.app"
+        until (mas account > /dev/null);
+        do
+            sleep 3
+        done
+        success "Login to app store successful."
+    fi
 }
 
 function pull_latest() {
