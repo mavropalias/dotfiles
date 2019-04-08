@@ -38,19 +38,19 @@ cask "vlc"
 cask "zoomus"
 
 # mas ——————————————————————————————————————————————————————————————————————————
-# mas "1Password", id: 443987910
-# mas "AudioBookBinder", id: 413969927
-# mas "Deliveries", id: 924726344
-# mas "Fantastical", id: 435003921
-# mas "iTranslate", id: 884952790
-# mas "Kaleidoscope", id: 587512244
-# mas "Keynote", id: 409183694
-# mas "Numbers", id: 409203825
-# mas "Pages", id: 409201541
-# mas "Pixelmator", id: 407963104
-# mas "RAW Power", id: 1157116444
-# mas "The Unarchiver", id: 425424353
-# mas "Transmit", id: 403388562
-# mas "Tweetbot", id: 1384080005
-# mas "Ulysses", id: 623795237
-# mas "Xcode", id: 497799835
+mas "1Password", id: 443987910
+mas "AudioBookBinder", id: 413969927
+mas "Deliveries", id: 924726344
+mas "Fantastical", id: 435003921
+mas "iTranslate", id: 884952790
+mas "Kaleidoscope", id: 587512244
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pixelmator", id: 407963104
+mas "RAW Power", id: 1157116444
+mas "The Unarchiver", id: 425424353
+mas "Transmit", id: 403388562
+mas "Tweetbot", id: 1384080005
+mas "Ulysses", id: 623795237
+mas "Xcode", id: 497799835
