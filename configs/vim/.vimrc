@@ -1,11 +1,10 @@
 " General settings ============================================================
 
-  set t_Co=256               " enable 256-color mode
+  set termguicolors          " enable true color
   filetype plugin indent on  " filetype detection and indentation
   syntax enable              " enable systax highlighting
   set number                 " show line numbers
-  colorscheme desert
-
+  set background=dark
 
 " Indentation =================================================================
 
@@ -49,9 +48,21 @@
   " vim-plugs -----------------------------------------------------------------
 
     call plug#begin('~/.vim/plugged')
-    Plug 'leafgarland/typescript-vim'
-    " Plug 'Valloric/YouCompleteMe'
+    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+    
+    " coc extensions
+    let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+
+    Plug 'ianks/vim-tsx' " Syntax highlighting and indenting for TSX
+    Plug 'leafgarland/typescript-vim' " Syntax & more for TypeScript
+    Plug 'tyrannicaltoucan/vim-deep-space' " Theme
     " Plug 'https://github.com/w0rp/ale.git'
-    " Plug 'Quramy/tsuquyomi'
     call plug#end()
+
+" Autocmd =====================================================================
+
+  " by default .ts file are not identified as typescript and .tsx files are not
+  " identified as typescript react file
+  au BufNewFile,BufRead *.ts setlocal filetype=typescript
+  au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
